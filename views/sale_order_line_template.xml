@@ -27,7 +27,7 @@
                     <field name="x_notes" string="Notes"/>
                 </xpath>
                 <xpath expr="//field[@name='order_line']//tree/field[@name='name']" position="replace">
-                        <field name="x_notes" class="oe_inline" placeholder="Insert extra specs here..."/>
+                    <field name="x_notes" class="oe_inline" placeholder="Insert extra specs here..."/>
                 </xpath>
                 <xpath expr="//field[@name='order_line']//tree/field[@name='tax_id']" position="replace"/>
             </field>
