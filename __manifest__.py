@@ -11,9 +11,6 @@
     'category': 'Business',
     'version': '0.5',
     'depends': ['base', 'sale', 'purchase'],
-    'images': [
-        'images/main.jpg',
-    ],
     'data': [
         'views/sale_order_line_template.xml',
         'views/purchase_order_line_template.xml',
