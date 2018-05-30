@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="custom_sale_order_line_inherit_view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']//form/group/group/field[@name='product_id']" position="before">
+                    <field name="x_line_no" string="No."/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//tree/field[@name='product_id']" position="before">
+                    <field name="x_line_no" string="No."/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//form/group/group/field[@name='product_id']" position="before">
+                    <field name="x_tag_no" string="Tag No."/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//tree/field[@name='product_id']" position="before">
+                    <field name="x_tag_no" string="Tag No."/>
+                </xpath>
+                <xpath expr="//div[@name='discount']" position="after">
+                    <field name="x_price_unit" string="New Price"/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//tree/field[@name='discount']" position="after">
+                    <field name="x_price_unit" string="New Price"/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//form/field[@name='name']" position="after">
+                    <field name="x_notes" string="Notes"/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//tree/field[@name='name']" position="replace">
+                        <field name="x_notes" class="oe_inline" placeholder="Insert extra specs here..."/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//tree/field[@name='tax_id']" position="replace"/>
+            </field>
+        </record>
+    </data>
+</odoo>
